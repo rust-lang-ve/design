@@ -1,0 +1,15 @@
+@import './theme/theme.scss';
+@import './header.scss';
+@import './home.scss';
+@import './projects.scss';
+@import './about.scss';
+@import './contributors.scss';
+@import './footer.scss';
+
+body {
+  font-family: 'Recursive', sans-serif;
+  // keep default font-size in 16px to have
+  // predictable dimensions with rem/rm units
+  font-size: 16px;
+  margin: 0;
+}

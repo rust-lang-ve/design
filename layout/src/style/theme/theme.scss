@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Recursive:wght@400;700&display=swap');
+@import './icons.scss';
+
+// colors
+$primary: #05405c;
+$secondary: #0a71a1;
+$actionable: #e0d207;
+$dark-gray: #525252;
+$soft-gray: #e1e4e8;
+
+$safe-height-padding: 67px;
+$content-size: 1024px;
+
+@mixin section-content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 67px 1rem 1rem 1rem;
+  max-width: $content-size;
+}
+
+@mixin ui-actionable {
+  align-items: center;
+  background-color: $primary;
+  border: none;
+  border-radius: .2rem;
+  box-sizing: border-box;
+  color: $actionable;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($primary, 2);
+  }
+}
+
+h1, h2, h3 {
+  font-family: 'Arvo', sans-serif;
+  font-weight: normal;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  margin-left: 1.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &::after {
+    background-color: rgba($color: #05405c, $alpha: .3);
+    content: " ";
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &::before {
+    content: "⚓";
+    font-size: .9rem;
+    position: absolute;
+    margin-left: -1.5rem;
+    opacity: .4;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+button {
+  @include ui-actionable();
+  padding: .6rem;
+}
+
+.link {
+  @include ui-actionable();
+  padding: .1rem .2rem;
+}
