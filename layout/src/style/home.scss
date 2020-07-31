@@ -1,0 +1,55 @@
+@import './theme/theme.scss';
+
+#home {
+  box-sizing: border-box;
+  padding-top: $safe-height-padding;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  #blur {
+    background-image: url('https://raw.githubusercontent.com/rust-lang-ve/design/feature/layout/assets/rust-playground-snippet.png');
+    background-color: #333333;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(1px);
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+
+  #content {
+    @include section-content();
+    align-items: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+
+    h2, p {
+      background-color: #333333;
+      border-radius: .25rem;
+      padding: .4rem;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    #logo {
+      margin: 1rem 0;
+    }
+
+    #introduction {
+      text-align: center;
+      width: 80%;
+      min-width: 400px;
+    }
+  }
+}

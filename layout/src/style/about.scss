@@ -1,0 +1,25 @@
+@import './theme/theme.scss';
+
+#about {
+  box-sizing: border-box;
+  padding-top: $safe-height-padding;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  #content {
+    @include section-content();
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+
+    article {
+      box-sizing: border-box;
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+}

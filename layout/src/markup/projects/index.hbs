@@ -1,0 +1,44 @@
+<section id="projects">
+  <div id="content">
+    {{> ../components/title
+      text="Proyectos"
+      href="projects"
+    }}
+    <p class="content">
+      Sientete libre de contribuir a cualquiera de nuestros proyectos en cualquier
+      nivel, sea abriendo un <i>issue</i>, discutiendo en nuestro grupo de Telegram
+      o bien sea abriendo un <i>pull request</i>!
+    </p>
+    <p class="content">
+      Estamos aca para crecer juntos and ayudar a otros futuros Rustaceans a escribir
+      sus aplicaciones y conocer lo increible que es Rust!
+    </p>
+    {{> ../components/title
+      text="Repositorios en GitHub!"
+      href="github-projects"
+    }}
+    <ul class="content" id="github-projects">
+      <!-- Fake Data -->
+      {{> repository
+        title="rust-lang-ve.github.io"
+        description="Lorem"
+        lang="Rust"
+      }}
+      {{> repository
+        title="some-library-with-a-pretty-long-name"
+        description="Lorem"
+        lang="Rust"
+      }}
+      {{> repository
+        title="lib.io"
+        description="Lorem"
+        lang="Rust"
+      }}
+      {{> repository
+        title="rust-lang-ve.github.io"
+        description="Lorem"
+        lang="Rust"
+      }}
+    </ul>
+  </div>
+</section>

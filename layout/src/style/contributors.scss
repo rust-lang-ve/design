@@ -1,0 +1,22 @@
+@import './theme/theme.scss';
+
+#contributors {
+  #content {
+    @include section-content();
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .contributor {
+        margin: 0 auto;
+
+        img {
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

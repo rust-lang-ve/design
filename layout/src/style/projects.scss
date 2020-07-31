@@ -1,0 +1,70 @@
+@import './theme/theme.scss';
+
+#projects {
+  #content {
+    @include section-content();
+
+    ul {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      .repository {
+        border: 1px solid $soft-gray;
+        border-radius: 6px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        height: 150px;
+        margin: 1rem;
+        max-width: 310px;
+        width: 280px;
+
+
+        main {
+          box-sizing: border-box;
+          height: 120px;
+          padding: .5rem 1rem;
+
+          strong {
+            text-overflow: ellipsis;
+            height: 20px;
+            width: 300px;
+          }
+  
+          p {
+            color: $dark-gray;
+            height: 90px;
+            font-size: .9rem;
+          }
+        }
+
+        footer {
+          span {
+            align-items: center;
+            box-sizing: border-box;
+            color: $dark-gray;
+            display: flex;
+            font-size: .9rem;
+            font-weight: normal;
+            height: 20px;
+            justify-content: flex-start;
+            padding: .5rem 1rem;
+
+            &::before {
+              background-color: #dea584;
+              border-radius: 100px;
+              content: "";
+              height: .9rem;
+              margin-right: .5rem;
+              width: .9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
