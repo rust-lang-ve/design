@@ -1,6 +1,6 @@
 {
   "name": "@rust-lang-ve/gh-pages-layout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Layout for rust-lang-ve's GitHub Pages Website",
   "main": "dist/index.js",
   "publishConfig": {
