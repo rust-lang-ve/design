@@ -2,13 +2,14 @@
   "name": "@rust-lang-ve/gh-pages-layout",
   "version": "0.1.0",
   "description": "Layout for rust-lang-ve's GitHub Pages Website",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "start": "webpack-dev-server --mode=development --open",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "prepublish": "rm -rf dist && yarn build"
   },
   "repository": {
     "type": "git",
