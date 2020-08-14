@@ -55,12 +55,24 @@
             padding: .5rem 1rem;
 
             &::before {
-              background-color: #dea584;
+              background-color: #ccc;
               border-radius: 100px;
               content: "";
               height: .9rem;
               margin-right: .5rem;
               width: .9rem;
+            }
+
+            &.rust::before {
+              background-color: #dea584;
+            }
+
+            &.css::before {
+              background-color: #563d7c;
+            }
+
+            &.html::before {
+              background-color: #fc7f02;
             }
           }
         }
