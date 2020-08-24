@@ -1,10 +1,11 @@
 @import './theme/theme.scss';
 @import './header.scss';
 @import './home.scss';
-@import './projects.scss';
+@import './github-radar.scss';
 @import './about.scss';
 @import './contributors.scss';
 @import './footer.scss';
+@import './components/tabs.scss';
 
 body {
   font-family: 'Recursive', sans-serif;

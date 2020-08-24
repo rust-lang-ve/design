@@ -1,0 +1,42 @@
+.nav-tabs {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .nav-tabs-list {
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    overflow-x: auto;
+    padding: 0;
+    padding-top: 60px;
+    margin: 0 auto -2px auto;
+    max-width: $content-size;
+
+    .nav-tab {
+      background-color: #ffffff;
+      border-bottom: 1px solid #f0f0f0;
+      box-sizing: border-box;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      margin-top: 1px;
+  
+      &.active {
+        border-bottom: 1px solid salmon;
+      }
+  
+      &:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+    }
+  }
+}
