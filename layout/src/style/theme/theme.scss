@@ -18,6 +18,13 @@ $content-size: 1024px;
   max-width: $content-size;
 }
 
+@mixin section-content-width {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  max-width: $content-size;
+}
+
 @mixin ui-actionable {
   align-items: center;
   background-color: $primary;

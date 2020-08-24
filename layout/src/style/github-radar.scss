@@ -1,0 +1,222 @@
+@import './theme/theme.scss';
+
+$issue: "%3Csvg xmlns='http://www.w3.org/2000/svg' fill='gray' height='20' viewBox='0 0 20 20' version='1.1' width='20' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z'%3E%3C/path%3E%3C/svg%3E";
+
+#github-radar {
+  #repositories {
+    @include section-content-width();
+
+    ul {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      .repository {
+        border: 1px solid $soft-gray;
+        border-radius: 6px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        height: 150px;
+        margin: 1rem;
+        max-width: 310px;
+        width: 280px;
+
+
+        main {
+          box-sizing: border-box;
+          height: 120px;
+          padding: .5rem 1rem;
+
+          strong {
+            text-overflow: ellipsis;
+            height: 20px;
+            width: 300px;
+          }
+  
+          p {
+            color: $dark-gray;
+            height: 90px;
+            font-size: .9rem;
+          }
+        }
+
+        footer {
+          span {
+            align-items: center;
+            box-sizing: border-box;
+            color: $dark-gray;
+            display: flex;
+            font-size: .9rem;
+            font-weight: normal;
+            height: 20px;
+            justify-content: flex-start;
+            padding: .5rem 1rem;
+
+            &::before {
+              background-color: #ccc;
+              border-radius: 100px;
+              content: "";
+              height: .9rem;
+              margin-right: .5rem;
+              width: .9rem;
+            }
+
+            &.rust::before {
+              background-color: #dea584;
+            }
+
+            &.css::before {
+              background-color: #563d7c;
+            }
+
+            &.html::before {
+              background-color: #fc7f02;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #activity {
+    @include section-content-width();
+
+    #events {
+      list-style-type: none;
+
+      .event {
+        position:relative;
+        margin-bottom: 0;
+        padding-bottom: 2.5em;
+
+        &:after {
+          content: ' ';
+          background-color: #ffffff;
+          background-image: url("data:image/svg+xml, #{$issue}");
+          height: 20px;
+          position: absolute;
+          left: -24px;
+          top: 4px;
+          width: 20px;
+        }
+
+        &:before {
+          content:'';
+          position: absolute;
+          left: -16px;
+          border-left: 1px solid #e7e7e7;
+          height: 100%;
+          width: 1px;
+        }
+
+        &:first-child:before {
+          top: 6px;
+        }
+
+        &:last-child:before {
+          height: 6px;
+        }
+
+        header {
+          margin-bottom: 1rem;
+
+          h3 {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        footer {
+          align-items: center;
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 1rem;
+          width: 100%;
+
+          img {
+            border-radius: 100px;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #issues {
+    @include section-content-width();
+
+    #issue-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      .issue {
+        border: 1px solid #e7e7e7;
+        border-radius: .5rem;
+        position:relative;
+        margin-bottom: 1rem;
+        padding: .5rem;
+
+        &:first-child:before {
+          top: 6px;
+        }
+
+        &:last-child:before {
+          height: 6px;
+        }
+
+        .issue-title {
+          box-sizing: border-box;
+          margin: 0;
+          padding: .5rem 0 .5rem 30px;
+
+          &::before {
+            content: ' ';
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml, #{$issue}");
+            height: 20px;
+            position: absolute;
+            left: .8rem;
+            top: 1.3rem;
+            width: 20px;
+          }
+        }
+
+        article {
+          box-sizing: border-box;
+          padding-left: 2rem;
+
+          .repository {
+            display: block;
+            margin: .5rem 0;
+          }
+  
+          .assignee {
+            display: block;
+            margin: .5rem 0;
+          }
+        }
+
+        footer {
+          align-items: center;
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+
+          .goto {
+            background-color: #13499d;
+            border-radius: .25rem;
+            color: #ffffff;
+            text-decoration: none;
+            padding: .6rem 1.2rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
